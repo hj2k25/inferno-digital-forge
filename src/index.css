@@ -1,92 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Creepster&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 24 24 27;
+    --foreground: 244 244 245;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 39 39 42;
+    --card-foreground: 244 244 245;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 39 39 42;
+    --popover-foreground: 244 244 245;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 38 38;
+    --primary-foreground: 244 244 245;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 63 63 70;
+    --secondary-foreground: 244 244 245;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 39 39 42;
+    --muted-foreground: 161 161 170;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 127 29 29;
+    --accent-foreground: 244 244 245;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 220 38 38;
+    --destructive-foreground: 244 244 245;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 63 63 70;
+    --input: 39 39 42;
+    --ring: 220 38 38;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 24 24 27;
+    --sidebar-foreground: 244 244 245;
+    --sidebar-primary: 220 38 38;
+    --sidebar-primary-foreground: 244 244 245;
+    --sidebar-accent: 39 39 42;
+    --sidebar-accent-foreground: 244 244 245;
+    --sidebar-border: 63 63 70;
+    --sidebar-ring: 220 38 38;
   }
 }
 
@@ -96,6 +53,88 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-volcanic-50 text-foreground font-serif;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(127, 29, 29, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(69, 10, 10, 0.4) 0%, transparent 50%);
+    background-attachment: fixed;
+    font-family: 'Cinzel', serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+  }
+
+  .inferno-title {
+    font-family: 'Creepster', cursive;
+    text-shadow: 2px 2px 4px rgba(220, 38, 38, 0.5);
+  }
+}
+
+@layer components {
+  .ember-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #F97316 0%, #DC2626 70%, transparent 100%);
+    border-radius: 50%;
+    animation: ember-float 8s linear infinite;
+  }
+
+  .ember-particle:nth-child(odd) {
+    animation-delay: -2s;
+    animation-duration: 10s;
+  }
+
+  .ember-particle:nth-child(even) {
+    animation-delay: -4s;
+    animation-duration: 12s;
+  }
+
+  .volcanic-texture {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(239, 68, 68, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 75% 75%, rgba(127, 29, 29, 0.1) 0%, transparent 25%);
+  }
+
+  .lava-button {
+    background: linear-gradient(45deg, #DC2626, #EF4444, #F97316);
+    background-size: 400% 400%;
+    animation: lava-flow 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+  }
+
+  .lava-button:hover {
+    animation: glow-pulse 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+
+  .flame-border {
+    border-image: linear-gradient(45deg, #DC2626, #EF4444, #F97316, #EF4444, #DC2626) 1;
+  }
+
+  .captcha-portal {
+    background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.2) 0%, rgba(24, 24, 27, 0.9) 70%);
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #DC2626, #7F1D1D);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #EF4444, #DC2626);
 }
