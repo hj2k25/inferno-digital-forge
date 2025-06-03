@@ -2,8 +2,11 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Book, Code, Music, Video, Image, Package } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCategories = () => {
+  const navigate = useNavigate();
+  
   const categories = [
     {
       id: 'ebooks',
@@ -49,6 +52,10 @@ const ProductCategories = () => {
     }
   ];
 
+  const handleCategoryClick = (categoryId: string) => {
+    navigate(`/category/${categoryId}`);
+  };
+
   return (
     <section className="py-16 px-4 relative">
       <div className="container mx-auto">
@@ -68,6 +75,7 @@ const ProductCategories = () => {
               <Card 
                 key={category.id}
                 className="group cursor-pointer transition-all duration-300 hover:scale-105 volcanic-texture border-inferno-800/30 bg-volcanic-100/50 backdrop-blur-sm hover:bg-inferno-500/10"
+                onClick={() => handleCategoryClick(category.id)}
               >
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 rounded-full bg-inferno-500/20 group-hover:bg-inferno-500/30 transition-colors">
