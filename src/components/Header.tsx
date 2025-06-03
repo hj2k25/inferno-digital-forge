@@ -15,21 +15,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
-              Home
-            </a>
+            
             <div className="relative group">
-              <button className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
-                Shop
-              </button>
+              
               {/* Dropdown for later */}
             </div>
-            <a href="#top-seller" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
-              Top-Seller
-            </a>
-            <a href="#neuerscheinungen" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
-              Neuerscheinungen
-            </a>
+            
+            
             <a href="#support" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
               Support
             </a>
