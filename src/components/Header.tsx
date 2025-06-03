@@ -1,23 +1,16 @@
-
 import React, { useState } from 'react';
 import { Menu, X, Flame, ShoppingCart, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  return (
-    <header className="relative z-50 bg-volcanic-50/90 backdrop-blur-lg border-b border-inferno-800/30">
+  return <header className="relative z-50 bg-volcanic-50/90 backdrop-blur-lg border-b border-inferno-800/30">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Flame className="h-8 w-8 text-inferno-500 animate-flame-flicker" />
-            <h1 className="text-2xl font-bold inferno-title text-inferno-500">
-              InfernoShop
-            </h1>
+            <h1 className="text-2xl font-bold inferno-title text-inferno-500">hemo</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -59,17 +52,13 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-inferno-500 hover:bg-inferno-500/10 rounded"
-          >
+          <button onClick={toggleMenu} className="md:hidden p-2 text-inferno-500 hover:bg-inferno-500/10 rounded">
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-inferno-800/30">
+        {isMenuOpen && <div className="md:hidden py-4 border-t border-inferno-800/30">
             <nav className="flex flex-col space-y-4">
               <a href="#home" className="text-volcanic-600 hover:text-inferno-500 transition-colors">
                 Home
@@ -97,11 +86,8 @@ const Header = () => {
                 </Button>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
