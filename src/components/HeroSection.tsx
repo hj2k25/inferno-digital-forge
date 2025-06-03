@@ -28,14 +28,9 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="lava-button text-white text-lg px-8 py-6 rounded-lg font-semibold shadow-2xl transform transition-all duration-300 hover:scale-105">
-            <Flame className="h-5 w-5 mr-2" />
-            Scharfe Ware entdecken
-          </Button>
           
-          <Button variant="outline" size="lg" className="border-2 border-inferno-500/50 text-inferno-400 hover:bg-inferno-500 hover:text-white text-lg px-8 py-6 bg-volcanic-50/10 backdrop-blur-sm">
-            Zur Hölle eintreten
-          </Button>
+          
+          <Button variant="outline" size="lg" className="border-2 border-inferno-500/50 text-inferno-400 hover:bg-inferno-500 hover:text-white text-lg px-8 py-6 bg-volcanic-50/10 backdrop-blur-sm">GO TO HELL!</Button>
         </div>
 
         {/* Scroll indicator */}
