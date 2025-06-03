@@ -10,7 +10,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Flame className="h-8 w-8 text-inferno-500 animate-flame-flicker" />
-            <h1 className="text-2xl font-bold inferno-title text-inferno-500">hemo</h1>
+            <h1 className="text-2xl font-bold inferno-title text-inferno-500">hells products</h1>
           </div>
 
           {/* Desktop Navigation */}
