@@ -24,9 +24,7 @@ const HeroSection = () => {
           <Flame className="h-16 w-16 text-inferno-500 mx-auto mb-4 animate-flame-flicker" />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 inferno-title text-transparent bg-clip-text bg-gradient-to-b from-inferno-400 to-inferno-600">Hells Products</h1>
           <p className="text-xl md:text-2xl text-volcanic-600 mb-8 leading-relaxed">Tritt ein in die Flammen, kaufe das Unaussprechliche!</p>
-          <p className="text-lg text-volcanic-500 mb-12 max-w-2xl mx-auto">
-            Entdecke eine düstere Welt digitaler Schätze - E-Books, Software, Musik und mehr aus den Tiefen des Internets
-          </p>
+          <p className="text-lg text-volcanic-500 mb-12 max-w-2xl mx-auto">Entdecke eine düstere Welt digitaler Schätze - DRAINER, LANDING PAGES, BOTS UND SOFTWARE WIE VOM TEUFEL GEMACHT!</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
