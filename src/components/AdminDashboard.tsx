@@ -18,6 +18,8 @@ import {
 import FileManager from './FileManager';
 import OrderManager from './OrderManager';
 import UserManager from './UserManager';
+import ThemeSettings from './ThemeSettings';
+import TelegramBotSettings from './TelegramBotSettings';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -40,7 +42,7 @@ const AdminDashboard = () => {
 
         {/* Dashboard Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-5 bg-volcanic-100">
+          <TabsList className="grid w-full grid-cols-7 bg-volcanic-100">
             <TabsTrigger value="overview" className="text-sm">
               Übersicht
             </TabsTrigger>
@@ -52,6 +54,12 @@ const AdminDashboard = () => {
             </TabsTrigger>
             <TabsTrigger value="users" className="text-sm">
               Nutzer
+            </TabsTrigger>
+            <TabsTrigger value="design" className="text-sm">
+              Design
+            </TabsTrigger>
+            <TabsTrigger value="telegram" className="text-sm">
+              Telegram Bot
             </TabsTrigger>
             <TabsTrigger value="settings" className="text-sm">
               Einstellungen
@@ -155,6 +163,16 @@ const AdminDashboard = () => {
           {/* Users Tab */}
           <TabsContent value="users">
             <UserManager />
+          </TabsContent>
+
+          {/* Design Tab */}
+          <TabsContent value="design">
+            <ThemeSettings />
+          </TabsContent>
+
+          {/* Telegram Bot Tab */}
+          <TabsContent value="telegram">
+            <TelegramBotSettings />
           </TabsContent>
 
           {/* Settings Tab */}
