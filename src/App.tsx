@@ -11,6 +11,10 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/AdminLogin";
 import Admin from "./pages/Admin";
+import Marketplace from "./pages/Marketplace";
+import VendorLogin from "./pages/VendorLogin";
+import VendorDashboard from "./pages/VendorDashboard";
+import VendorShop from "./pages/VendorShop";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +28,11 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/category/:categoryId" element={<Category />} />
+              <Route path="/vendor/login" element={<VendorLogin />} />
+              <Route path="/vendor/dashboard" element={<VendorDashboard />} />
+              <Route path="/vendor/:vendorId" element={<VendorShop />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={<Admin />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

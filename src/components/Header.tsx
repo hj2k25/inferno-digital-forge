@@ -26,13 +26,16 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Flame className="h-8 w-8 text-inferno-500 animate-flame-flicker" />
-              <h1 className="text-2xl font-bold inferno-title text-inferno-500">hells products</h1>
+              <h1 className="text-2xl font-bold inferno-title text-inferno-500">Cryloca</h1>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
                 Home
+              </a>
+              <a href="/marketplace" className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium">
+                Marktplatz
               </a>
               <div className="relative group">
                 <span className="text-volcanic-600 hover:text-inferno-500 transition-colors font-medium cursor-pointer">
@@ -115,6 +118,9 @@ const Header = () => {
               <nav className="flex flex-col space-y-4">
                 <a href="/" className="text-volcanic-600 hover:text-inferno-500 transition-colors">
                   Home
+                </a>
+                <a href="/marketplace" className="text-volcanic-600 hover:text-inferno-500 transition-colors">
+                  Marktplatz
                 </a>
                 <a href="/category/ebooks" className="text-volcanic-600 hover:text-inferno-500 transition-colors">
                   E-Books

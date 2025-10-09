@@ -13,13 +13,15 @@ import {
   Download,
   Eye,
   Trash2,
-  Plus
+  Plus,
+  Store
 } from 'lucide-react';
 import FileManager from './FileManager';
 import OrderManager from './OrderManager';
 import UserManager from './UserManager';
 import ThemeSettings from './ThemeSettings';
 import TelegramBotSettings from './TelegramBotSettings';
+import VendorManager from './VendorManager';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -42,9 +44,12 @@ const AdminDashboard = () => {
 
         {/* Dashboard Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-7 bg-volcanic-100">
+          <TabsList className="grid w-full grid-cols-8 bg-volcanic-100">
             <TabsTrigger value="overview" className="text-sm">
               Übersicht
+            </TabsTrigger>
+            <TabsTrigger value="vendors" className="text-sm">
+              Vendors
             </TabsTrigger>
             <TabsTrigger value="files" className="text-sm">
               Dateien
@@ -148,6 +153,11 @@ const AdminDashboard = () => {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Vendors Tab */}
+          <TabsContent value="vendors">
+            <VendorManager />
           </TabsContent>
 
           {/* Files Tab */}
