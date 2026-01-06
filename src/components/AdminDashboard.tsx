@@ -14,7 +14,8 @@ import {
   Eye,
   Trash2,
   Plus,
-  Store
+  Store,
+  Wallet
 } from 'lucide-react';
 import FileManager from './FileManager';
 import OrderManager from './OrderManager';
@@ -22,6 +23,7 @@ import UserManager from './UserManager';
 import ThemeSettings from './ThemeSettings';
 import TelegramBotSettings from './TelegramBotSettings';
 import VendorManager from './VendorManager';
+import CryptoWalletSettings from './CryptoWalletSettings';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -44,7 +46,7 @@ const AdminDashboard = () => {
 
         {/* Dashboard Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-8 bg-volcanic-100">
+          <TabsList className="grid w-full grid-cols-9 bg-volcanic-100">
             <TabsTrigger value="overview" className="text-sm">
               Übersicht
             </TabsTrigger>
@@ -59,6 +61,9 @@ const AdminDashboard = () => {
             </TabsTrigger>
             <TabsTrigger value="users" className="text-sm">
               Nutzer
+            </TabsTrigger>
+            <TabsTrigger value="wallets" className="text-sm">
+              Wallets
             </TabsTrigger>
             <TabsTrigger value="design" className="text-sm">
               Design
@@ -173,6 +178,15 @@ const AdminDashboard = () => {
           {/* Users Tab */}
           <TabsContent value="users">
             <UserManager />
+          </TabsContent>
+
+          {/* Wallets Tab */}
+          <TabsContent value="wallets">
+            <CryptoWalletSettings 
+              storageKey="admin_wallets"
+              title="Admin Crypto Wallets"
+              description="Globale Wallet-Adressen für Zahlungen (werden verwendet wenn Vendor keine eigenen hat)"
+            />
           </TabsContent>
 
           {/* Design Tab */}
